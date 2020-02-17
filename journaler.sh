@@ -30,7 +30,7 @@ if [ ! -d "./$YEAR/$MONTH" ]; then
     mkdir "./$YEAR/$MONTH"
 fi
 if [ ! -f "$ENTRY_FILE" ]; then
-    echo "Journal Entry - $FULL_DATE" > $ENTRY_FILE
+    echo "- $DAY $MONTH -" > $ENTRY_FILE
     echo "Entry for $FULL_DATE created"
 fi
 
@@ -71,4 +71,6 @@ if [ "$1" = "-d" ]; then
 fi
 
 echo "Opening entry for $FULL_DATE"
+TIME=$(date +%H:%M)
+printf "\n$TIME:" >> $ENTRY_FILE
 $(config texteditor) "$ENTRY_FILE"
