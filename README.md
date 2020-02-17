@@ -14,6 +14,17 @@ Run the bash script
 ```
 Input your preferred text editor and journal away!
 
+### Optionally: create bash alias
+Run this command from the project directory:
+```
+echo "alias journal='"$PWD"/journaler.sh'" >> ~/.bash_profile
+```
+
+You should now be able to run the program simply using:
+```
+journal
+```
+
 ## Feature flags
 Heres a list of flags to access additional features:
 
@@ -22,7 +33,6 @@ Heres a list of flags to access additional features:
 
 ## To-do
 
-- [ ] Check permission on clone
-- [ ] Add info on adding bash alias
+- [ ] Append time of entry to each entry
 
 Tested with bash 3.2
