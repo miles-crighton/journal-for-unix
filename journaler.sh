@@ -35,7 +35,7 @@ if [ ! -f "$ENTRY_FILE" ]; then
 fi
 
 #Ask user for their preferred text editor
-if [ ! -f "./config.conf" ] || [ $1 = '--change-editor' ]; then
+if [ ! -f "./config.conf" ] || [ '$1' = '--change-editor' ]; then
     while :
     do
         read -p 'Choose a default text editor command: ' TEXTEDITOR
@@ -49,7 +49,7 @@ if [ ! -f "./config.conf" ] || [ $1 = '--change-editor' ]; then
 fi
 
 #Get a specific journal entry
-if [ $1 = '-d' ]; then
+if [ '$1' = '-d' ]; then
     #Read requested date from input arguments
     #Split into DATE_ARR of length 3
     IFS='-'
@@ -71,4 +71,4 @@ if [ $1 = '-d' ]; then
 fi
 
 echo "Opening entry for $FULL_DATE"
-#$(config texteditor) "$ENTRY_FILE"
+$(config texteditor) "$ENTRY_FILE"
