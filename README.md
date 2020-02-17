@@ -1,4 +1,4 @@
-#Journaler for Unix
+# Journaler for Unix
 
 A bash script for quickly generating and accessing local journal entries
 
