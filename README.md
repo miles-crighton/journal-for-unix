@@ -14,10 +14,10 @@ Run the bash script
 ```
 Input your preferred text editor and journal away!
 
-### Optionally: create bash alias
+### Optionally: create bash shortcut function
 Run this command from the project directory:
 ```
-echo "alias journal='"$PWD"/journaler.sh'" >> ~/.bash_profile
+echo "journal() { "$PWD"/journaler.sh \$@; }" >> ~/.bash_profile
 ```
 
 You should now be able to run the program simply using:
