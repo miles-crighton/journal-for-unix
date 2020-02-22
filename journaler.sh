@@ -1,4 +1,6 @@
 #!/bin/bash
+cd "$(dirname "$0")"
+
 config() {
     #Grab value from config file for first arg of function ($1)
     #Returns default for arg if not found
